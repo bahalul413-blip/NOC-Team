@@ -18,50 +18,50 @@ html,body{height:100%;}
 body{background:var(--black);display:flex;flex-direction:column;min-height:100vh;}
 .wrap{display:flex;flex-direction:column;height:100vh;}
 .topbar{background:var(--panel);border-bottom:1px solid var(--border-strong);padding:10px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.logo{width:36px;height:36px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;}
+.logo{width:32px;height:32px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;color:#fff;}
 .brand{display:flex;flex-direction:column;line-height:1.15;}
-.brand-name{font-size:14px;font-weight:700;color:var(--green-light);letter-spacing:.08em;text-transform:uppercase;}
-.brand-sub{font-size:11px;color:var(--text2);letter-spacing:.12em;text-transform:uppercase;}
+.brand-name{font-size:12px;font-weight:700;color:var(--green-light);letter-spacing:.08em;text-transform:uppercase;}
+.brand-sub{font-size:10px;color:var(--text2);letter-spacing:.12em;text-transform:uppercase;}
 .split{display:grid;grid-template-columns:1fr 1fr;flex:1;overflow:hidden;}
 .pane{display:flex;flex-direction:column;border-right:1px solid var(--border);overflow:hidden;}
 .pane:last-child{border-right:none;}
-.pane-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;background:var(--panel);flex-shrink:0;}
-.pane-title{font-size:15px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px;}
-.pane-title i{font-size:17px;color:var(--green-light);}
-.add-row{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--panel);flex-shrink:0;}
-.add-row input{flex:1;background:#222;border:1px solid var(--border-strong);border-radius:5px;padding:8px 12px;font-size:14px;color:var(--text);outline:none;}
+.pane-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;background:var(--panel);flex-shrink:0;}
+.pane-title{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px;}
+.pane-title i{font-size:15px;color:var(--green-light);}
+.add-row{display:flex;gap:6px;padding:8px 12px;border-bottom:1px solid var(--border);background:var(--panel);flex-shrink:0;}
+.add-row input{flex:1;background:#222;border:1px solid var(--border-strong);border-radius:5px;padding:6px 10px;font-size:12px;color:var(--text);outline:none;}
 .add-row input:focus{border-color:var(--green-light);}
 .add-row input::placeholder{color:var(--text2);}
-.add-row button{background:var(--green);border:none;border-radius:5px;padding:8px 14px;font-size:12px;font-weight:700;color:#fff;cursor:pointer;text-transform:uppercase;}
+.add-row button{background:var(--green);border:none;border-radius:5px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;cursor:pointer;text-transform:uppercase;}
 .add-row button:hover{background:var(--green-light);}
-.items{flex:1;overflow-y:auto;padding:10px 12px;display:flex;flex-direction:column;gap:8px;}
+.items{flex:1;overflow-y:auto;padding:8px 10px;display:flex;flex-direction:column;gap:6px;}
 .items::-webkit-scrollbar{width:3px;}
 .items::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:3px;}
-.item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:11px 13px;display:flex;flex-direction:column;gap:7px;transition:background .12s,border-color .12s;}
+.item{background:var(--card);border:1px solid var(--border);border-radius:7px;padding:9px 11px;display:flex;flex-direction:column;gap:6px;transition:background .12s,border-color .12s;}
 .item:hover{background:var(--card-hover);border-color:var(--border-strong);}
-.item-title{font-size:15px;color:var(--text);line-height:1.4;flex:1;}
-.item-date{font-size:12px;color:var(--text2);}
+.item-title{font-size:13px;color:var(--text);line-height:1.35;flex:1;}
+.item-date{font-size:11px;color:var(--text2);}
 .item-row{display:flex;align-items:center;gap:6px;}
 .item-actions{display:flex;align-items:center;gap:3px;margin-left:auto;opacity:0;transition:opacity .12s;}
 .item:hover .item-actions{opacity:1;}
-.ibtn{background:none;border:none;cursor:pointer;color:var(--text2);font-size:16px;padding:3px 6px;border-radius:4px;transition:background .1s,color .1s;}
+.ibtn{background:none;border:none;cursor:pointer;color:var(--text2);font-size:14px;padding:3px 5px;border-radius:4px;transition:background .1s,color .1s;}
 .ibtn:hover{background:rgba(67,160,71,.12);color:var(--green-light);}
 .ibtn.del:hover{background:rgba(229,57,53,.1);color:var(--blocked);}
 .ibtn.save-btn:hover{background:rgba(67,160,71,.18);color:var(--done);}
 .ibtn.cancel-btn:hover{background:rgba(229,57,53,.08);color:var(--blocked);}
-.edit-input{flex:1;background:#1e1e1e;border:1px solid var(--green-light);border-radius:5px;padding:6px 10px;font-size:15px;color:var(--text);outline:none;line-height:1.4;}
-.badge{font-size:11px;font-weight:700;padding:3px 11px;border-radius:10px;border:1px solid;white-space:nowrap;cursor:pointer;text-transform:uppercase;letter-spacing:.03em;position:relative;}
+.edit-input{flex:1;background:#1e1e1e;border:1px solid var(--green-light);border-radius:5px;padding:5px 8px;font-size:13px;color:var(--text);outline:none;line-height:1.35;}
+.badge{font-size:10px;font-weight:700;padding:2px 9px;border-radius:10px;border:1px solid;white-space:nowrap;cursor:pointer;text-transform:uppercase;letter-spacing:.03em;position:relative;}
 .badge.pending{color:var(--pending);border-color:var(--pending);background:rgba(224,160,32,.1);}
 .badge.inprog{color:var(--inprog);border-color:var(--inprog);background:rgba(33,150,243,.1);}
 .badge.done{color:var(--done);border-color:var(--done);background:rgba(67,160,71,.1);}
 .badge.blocked{color:var(--blocked);border-color:var(--blocked);background:rgba(229,57,53,.1);}
 .smenu{position:absolute;right:0;top:calc(100% + 3px);background:var(--panel);border:1px solid var(--border-strong);border-radius:7px;z-index:99;min-width:130px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.5);}
-.sopt{padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;text-transform:uppercase;color:var(--text);letter-spacing:.03em;}
+.sopt{padding:7px 11px;font-size:11px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;text-transform:uppercase;color:var(--text);letter-spacing:.03em;}
 .sopt:hover{background:rgba(67,160,71,.12);}
 .sdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 .empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:32px 0;color:var(--text2);}
-.empty i{font-size:30px;opacity:.35;}
-.empty p{font-size:13px;}
+.empty i{font-size:28px;opacity:.35;}
+.empty p{font-size:12px;}
 </style>
 </head>
 <body>
@@ -97,43 +97,82 @@ body{background:var(--black);display:flex;flex-direction:column;min-height:100vh
   </div>
 </div>
 
-<script>
-const SC={Pending:'pending','In Progress':'inprog',Done:'done',Blocked:'blocked'};
-const SC_COLOR={Pending:'#E0A020','In Progress':'#2196F3',Done:'#43A047',Blocked:'#E53935'};
-const STORAGE_KEY='noc_team_data';
-const DEFAULT_DATA={
-  ops:[
-    {id:1,title:'NHL PROD - Windows Update Fixes',status:'Pending',date:'2026-05-27T06:37:21'},
-    {id:2,title:'NCEL - Maintenance - DBA Prod - Rebuild PlayersTransactions - Elad',status:'In Progress',date:'2026-05-27T09:10:00'},
-    {id:3,title:'DB backup verification - all regions',status:'Blocked',date:'2026-05-27T07:45:00'},
-    {id:4,title:'Monitor prod servers health check',status:'Done',date:'2026-05-26T14:20:00'},
-  ],
-  tasks:[
-    {id:5,title:'Review firewall rules update',status:'Pending',date:'2026-05-27T08:00:00'},
-    {id:6,title:'SSL certificate renewal - prod',status:'In Progress',date:'2026-05-26T11:00:00'},
-  ]
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+
+const firebaseConfig={
+  projectId:"team-noc-77deb",
+  databaseURL:"https://team-noc-77deb-default-rtdb.firebaseio.com"
 };
 
-function loadData(){
-  try{
-    const saved=localStorage.getItem(STORAGE_KEY);
-    if(saved) return JSON.parse(saved);
-  }catch(e){}
-  return JSON.parse(JSON.stringify(DEFAULT_DATA));
+const app=initializeApp(firebaseConfig);
+const db=getDatabase(app);
+const boardRef=ref(db,"nocBoard");
+const SC={Pending:'pending','In Progress':'inprog',Done:'done',Blocked:'blocked'};
+const SC_COLOR={Pending:'#E0A020','In Progress':'#2196F3',Done:'#43A047',Blocked:'#E53935'};
+let data={
+  ops:[
+    {id:1,title:'NHL PROD - Windows Update Fixes',status:'Pending',date:new Date('2026-05-27T06:37:21')},
+    {id:2,title:'NCEL - Maintenance - DBA Prod - Rebuild PlayersTransactions - Elad',status:'In Progress',date:new Date('2026-05-27T09:10:00')},
+    {id:3,title:'DB backup verification - all regions',status:'Blocked',date:new Date('2026-05-27T07:45:00')},
+    {id:4,title:'Monitor prod servers health check',status:'Done',date:new Date('2026-05-26T14:20:00')},
+  ],
+  tasks:[
+    {id:5,title:'Review firewall rules update',status:'Pending',date:new Date('2026-05-27T08:00:00')},
+    {id:6,title:'SSL certificate renewal - prod',status:'In Progress',date:new Date('2026-05-26T11:00:00')},
+  ]
+};
+let nid=10,openMenu=null,editingId=null,isReady=false,isSaving=false;
+
+function esc(v){
+  return String(v).replace(/[&<>"']/g,ch=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[ch]));
+}
+
+function normalizeBoard(saved){
+  const fallback={ops:[],tasks:[]};
+  const next=saved&&saved.data?saved.data:fallback;
+  for(const pane of ['ops','tasks']){
+    if(!Array.isArray(next[pane]))next[pane]=[];
+    next[pane]=next[pane].map(item=>({
+      id:Number(item.id),
+      title:String(item.title||''),
+      status:SC[item.status]?item.status:'Pending',
+      date:new Date(item.date||Date.now())
+    })).filter(item=>Number.isFinite(item.id)&&item.title);
+  }
+  return {
+    data:next,
+    nid:Number(saved&&saved.nid)||Math.max(1,...next.ops.concat(next.tasks).map(item=>item.id))+1
+  };
+}
+
+function serializeBoard(){
+  return {
+    data:{
+      ops:data.ops.map(item=>({...item,date:item.date.toISOString()})),
+      tasks:data.tasks.map(item=>({...item,date:item.date.toISOString()}))
+    },
+    nid
+  };
 }
 
 function saveData(){
-  try{ localStorage.setItem(STORAGE_KEY,JSON.stringify(data)); }catch(e){}
+  if(!isReady||isSaving)return;
+  isSaving=true;
+  set(boardRef,serializeBoard())
+    .catch(err=>{
+      console.error('Firebase save failed:',err);
+      alert('Firebase save failed. Check Realtime Database rules and connection.');
+    })
+    .finally(()=>{isSaving=false;});
 }
 
-let data=loadData();
-let nid=Math.max(...[...data.ops,...data.tasks].map(t=>t.id),9)+1;
-let openMenu=null,editingId=null;
-
 function fmt(d){
-  const dt=new Date(d);
-  return dt.toLocaleDateString('en-US',{month:'numeric',day:'numeric',year:'numeric'})+', '+
-    dt.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});
+  return d.toLocaleDateString('en-US',{month:'numeric',day:'numeric',year:'numeric'})+', '+
+    d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});
 }
 
 function render(pane){
@@ -148,8 +187,8 @@ function render(pane){
     return `<div class="item" id="item-${t.id}">
       <div class="item-row">
         ${isEditing
-          ? `<input class="edit-input" id="edit-${t.id}" value="${t.title.replace(/"/g,'&quot;')}" onkeydown="handleEditKey(event,'${pane}',${t.id})">`
-          : `<div class="item-title">${t.title}</div>`
+          ? `<input class="edit-input" id="edit-${t.id}" value="${esc(t.title)}" onkeydown="handleEditKey(event,'${pane}',${t.id})">`
+          : `<div class="item-title">${esc(t.title)}</div>`
         }
         <div class="item-actions" style="opacity:${isEditing?1:''}">
           ${isEditing
@@ -163,7 +202,7 @@ function render(pane){
       <div class="item-row">
         <span class="item-date">${fmt(t.date)}</span>
         <div style="margin-left:auto;position:relative;">
-          <div class="badge ${SC[t.status]}" onclick="toggleMenu(${t.id},'${pane}',event)">${t.status} <i class="ti ti-chevron-down" style="font-size:10px;vertical-align:1px;"></i></div>
+          <div class="badge ${SC[t.status]}" onclick="toggleMenu(${t.id},'${pane}',event)">${t.status} <i class="ti ti-chevron-down" style="font-size:9px;vertical-align:1px;"></i></div>
           <div class="smenu" id="smenu-${t.id}" style="display:none;">
             ${Object.keys(SC).map(s=>`<div class="sopt" onclick="setStatus('${pane}',${t.id},'${s}')"><span class="sdot" style="background:${SC_COLOR[s]}"></span>${s}</div>`).join('')}
           </div>
@@ -183,17 +222,17 @@ function addItem(pane){
   const inp=document.getElementById(pane+'-input');
   const v=inp.value.trim();
   if(!v)return;
-  data[pane].unshift({id:nid++,title:v,status:'Pending',date:new Date().toISOString()});
+  data[pane].unshift({id:nid++,title:v,status:'Pending',date:new Date()});
   inp.value='';
-  saveData();
   render(pane);
+  saveData();
 }
 
 function delItem(pane,id){
   data[pane]=data[pane].filter(t=>t.id!==id);
   if(editingId===id)editingId=null;
-  saveData();
   render(pane);
+  saveData();
 }
 
 function startEdit(pane,id){editingId=id;render(pane);}
@@ -202,9 +241,8 @@ function saveEdit(pane,id){
   const inp=document.getElementById('edit-'+id);
   const v=inp?inp.value.trim():'';
   if(v){const t=data[pane].find(x=>x.id===id);if(t)t.title=v;}
-  editingId=null;
+  editingId=null;render(pane);
   saveData();
-  render(pane);
 }
 
 function cancelEdit(pane){editingId=null;render(pane);}
@@ -227,15 +265,37 @@ function setStatus(pane,id,status){
   const t=data[pane].find(x=>x.id===id);
   if(t)t.status=status;
   if(openMenu){openMenu.style.display='none';openMenu=null;}
-  saveData();
   render(pane);
+  saveData();
 }
 
 document.addEventListener('click',()=>{
   if(openMenu){openMenu.style.display='none';openMenu=null;}
 });
 
-renderAll();
+onValue(boardRef,snapshot=>{
+  const saved=snapshot.val();
+  if(saved){
+    const board=normalizeBoard(saved);
+    data=board.data;
+    nid=board.nid;
+    isReady=true;
+    renderAll();
+    return;
+  }
+  isReady=true;
+  renderAll();
+  saveData();
+},err=>{
+  console.error('Firebase load failed:',err);
+  isReady=true;
+  renderAll();
+  alert('Firebase load failed. Check Realtime Database rules and connection.');
+});
+
+Object.assign(window,{
+  addItem,delItem,startEdit,saveEdit,cancelEdit,handleEditKey,toggleMenu,setStatus
+});
 </script>
 </body>
 </html>
