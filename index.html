@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOC Team — Aristocrat Interactive</title>
+<title>Team NOC — Aristocrat Interactive</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;}
 :root{
   --green:#2E7D32;--green-light:#43A047;
   --black:#0A0A0A;--panel:#111111;--card:#1A1A1A;--card-hover:#222222;
@@ -14,18 +15,18 @@
   --text:#F0F0F0;--text2:#888;
   --pending:#E0A020;--inprog:#2196F3;--done:#43A047;--blocked:#E53935;
 }
-html,body{height:100%;}
-body{background:var(--black);display:flex;flex-direction:column;min-height:100vh;}
-.wrap{display:flex;flex-direction:column;height:100vh;}
+html,body{height:100%;overflow:hidden;}
+body{background:var(--black);display:flex;flex-direction:column;}
+.wrap{display:flex;flex-direction:column;height:100vh;overflow:hidden;}
 .topbar{background:var(--panel);border-bottom:1px solid var(--border-strong);padding:10px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0;}
 .logo{width:32px;height:32px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;color:#fff;}
 .brand{display:flex;flex-direction:column;line-height:1.15;}
 .brand-name{font-size:12px;font-weight:700;color:var(--green-light);letter-spacing:.08em;text-transform:uppercase;}
-.brand-sub{font-size:10px;color:var(--text2);letter-spacing:.12em;text-transform:uppercase;}
-.split{display:grid;grid-template-columns:1fr 1fr;flex:1;overflow:hidden;}
-.pane{display:flex;flex-direction:column;border-right:1px solid var(--border);overflow:hidden;}
+.brand-sub{font-size:10px;color:var(--green-light);font-weight:600;letter-spacing:.12em;text-transform:uppercase;}
+.split{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0;overflow:hidden;}
+.pane{display:flex;flex-direction:column;border-right:1px solid var(--border);min-height:0;overflow:hidden;}
 .pane:last-child{border-right:none;}
-.pane-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;background:var(--panel);flex-shrink:0;}
+.pane-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;background:var(--panel);flex-shrink:0;}
 .pane-title{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px;}
 .pane-title i{font-size:15px;color:var(--green-light);}
 .add-row{display:flex;gap:6px;padding:8px 12px;border-bottom:1px solid var(--border);background:var(--panel);flex-shrink:0;}
@@ -34,32 +35,30 @@ body{background:var(--black);display:flex;flex-direction:column;min-height:100vh
 .add-row input::placeholder{color:var(--text2);}
 .add-row button{background:var(--green);border:none;border-radius:5px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;cursor:pointer;text-transform:uppercase;}
 .add-row button:hover{background:var(--green-light);}
-.items{flex:1;overflow-y:auto;padding:8px 10px;display:flex;flex-direction:column;gap:6px;}
-.items::-webkit-scrollbar{width:3px;}
-.items::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:3px;}
-.item{background:var(--card);border:1px solid var(--border);border-radius:7px;padding:9px 11px;display:flex;flex-direction:column;gap:6px;transition:background .12s,border-color .12s;}
+.items{flex:1;overflow:hidden;padding:8px 10px;display:flex;flex-direction:column;gap:6px;min-height:0;}
+.item{background:var(--card);border:1px solid var(--border);border-radius:7px;padding:12px 14px;display:flex;align-items:center;gap:14px;flex:1;transition:background .12s,border-color .12s;min-height:0;}
 .item:hover{background:var(--card-hover);border-color:var(--border-strong);}
-.item-title{font-size:13px;color:var(--text);line-height:1.35;flex:1;}
-.item-date{font-size:11px;color:var(--text2);}
-.item-row{display:flex;align-items:center;gap:6px;}
-.item-actions{display:flex;align-items:center;gap:3px;margin-left:auto;opacity:0;transition:opacity .12s;}
+.item-text{flex:1;min-width:0;}
+.item-title{font-size:17px;font-weight:700;color:var(--text);line-height:1.3;}
+.item-date{font-size:11px;color:var(--text2);margin-top:4px;}
+.item-actions{display:flex;align-items:center;gap:3px;opacity:0;transition:opacity .12s;flex-shrink:0;}
 .item:hover .item-actions{opacity:1;}
-.ibtn{background:none;border:none;cursor:pointer;color:var(--text2);font-size:14px;padding:3px 5px;border-radius:4px;transition:background .1s,color .1s;}
+.ibtn{background:none;border:none;cursor:pointer;color:var(--text2);font-size:16px;padding:3px 5px;border-radius:4px;transition:background .1s,color .1s;}
 .ibtn:hover{background:rgba(67,160,71,.12);color:var(--green-light);}
 .ibtn.del:hover{background:rgba(229,57,53,.1);color:var(--blocked);}
 .ibtn.save-btn:hover{background:rgba(67,160,71,.18);color:var(--done);}
 .ibtn.cancel-btn:hover{background:rgba(229,57,53,.08);color:var(--blocked);}
-.edit-input{flex:1;background:#1e1e1e;border:1px solid var(--green-light);border-radius:5px;padding:5px 8px;font-size:13px;color:var(--text);outline:none;line-height:1.35;}
-.badge{font-size:10px;font-weight:700;padding:2px 9px;border-radius:10px;border:1px solid;white-space:nowrap;cursor:pointer;text-transform:uppercase;letter-spacing:.03em;position:relative;}
-.badge.pending{color:var(--pending);border-color:var(--pending);background:rgba(224,160,32,.1);}
-.badge.inprog{color:var(--inprog);border-color:var(--inprog);background:rgba(33,150,243,.1);}
-.badge.done{color:var(--done);border-color:var(--done);background:rgba(67,160,71,.1);}
-.badge.blocked{color:var(--blocked);border-color:var(--blocked);background:rgba(229,57,53,.1);}
+.edit-input{flex:1;background:#1e1e1e;border:1px solid var(--green-light);border-radius:5px;padding:5px 8px;font-size:17px;font-weight:700;color:var(--text);outline:none;line-height:1.3;width:100%;}
+.status-block{width:100px;flex-shrink:0;border-radius:6px;padding:8px 4px;text-align:center;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;position:relative;}
+.status-block.pending{background:rgba(224,160,32,.18);color:var(--pending);border:1px solid rgba(224,160,32,.4);}
+.status-block.inprog{background:rgba(33,150,243,.18);color:var(--inprog);border:1px solid rgba(33,150,243,.4);}
+.status-block.done{background:rgba(67,160,71,.18);color:var(--done);border:1px solid rgba(67,160,71,.4);}
+.status-block.blocked{background:rgba(229,57,53,.18);color:var(--blocked);border:1px solid rgba(229,57,53,.4);}
 .smenu{position:absolute;right:0;top:calc(100% + 3px);background:var(--panel);border:1px solid var(--border-strong);border-radius:7px;z-index:99;min-width:130px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.5);}
 .sopt{padding:7px 11px;font-size:11px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;text-transform:uppercase;color:var(--text);letter-spacing:.03em;}
 .sopt:hover{background:rgba(67,160,71,.12);}
 .sdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:32px 0;color:var(--text2);}
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;flex:1;color:var(--text2);}
 .empty i{font-size:28px;opacity:.35;}
 .empty p{font-size:12px;}
 </style>
@@ -70,7 +69,7 @@ body{background:var(--black);display:flex;flex-direction:column;min-height:100vh
     <div class="logo">A</div>
     <div class="brand">
       <span class="brand-name">Aristocrat Interactive</span>
-      <span class="brand-sub">NOC Team</span>
+      <span class="brand-sub">Team NOC</span>
     </div>
   </div>
   <div class="split">
@@ -184,30 +183,29 @@ function render(pane){
   }
   el.innerHTML=items.map(t=>{
     const isEditing=editingId===t.id;
+    const sc=SC[t.status]||'pending';
     return `<div class="item" id="item-${t.id}">
-      <div class="item-row">
+      ${isEditing
+        ? `<input class="edit-input" id="edit-${t.id}" value="${esc(t.title)}" onkeydown="handleEditKey(event,'${pane}',${t.id})">`
+        : `<div class="item-text">
+            <div class="item-title">${esc(t.title)}</div>
+            <div class="item-date">${fmt(t.date)}</div>
+          </div>`
+      }
+      <div class="item-actions" style="opacity:${isEditing?1:''}">
         ${isEditing
-          ? `<input class="edit-input" id="edit-${t.id}" value="${esc(t.title)}" onkeydown="handleEditKey(event,'${pane}',${t.id})">`
-          : `<div class="item-title">${esc(t.title)}</div>`
+          ? `<button class="ibtn save-btn" onclick="saveEdit('${pane}',${t.id})" title="Save"><i class="ti ti-check"></i></button>
+             <button class="ibtn cancel-btn" onclick="cancelEdit('${pane}')" title="Cancel"><i class="ti ti-x"></i></button>`
+          : `<button class="ibtn" onclick="startEdit('${pane}',${t.id})" title="Edit"><i class="ti ti-pencil"></i></button>
+             <button class="ibtn del" onclick="delItem('${pane}',${t.id})" title="Delete"><i class="ti ti-trash"></i></button>`
         }
-        <div class="item-actions" style="opacity:${isEditing?1:''}">
-          ${isEditing
-            ? `<button class="ibtn save-btn" onclick="saveEdit('${pane}',${t.id})" title="Save"><i class="ti ti-check"></i></button>
-               <button class="ibtn cancel-btn" onclick="cancelEdit('${pane}')" title="Cancel"><i class="ti ti-x"></i></button>`
-            : `<button class="ibtn" onclick="startEdit('${pane}',${t.id})" title="Edit"><i class="ti ti-pencil"></i></button>
-               <button class="ibtn del" onclick="delItem('${pane}',${t.id})" title="Delete"><i class="ti ti-trash"></i></button>`
-          }
-        </div>
       </div>
-      <div class="item-row">
-        <span class="item-date">${fmt(t.date)}</span>
-        <div style="margin-left:auto;position:relative;">
-          <div class="badge ${SC[t.status]}" onclick="toggleMenu(${t.id},'${pane}',event)">${t.status} <i class="ti ti-chevron-down" style="font-size:9px;vertical-align:1px;"></i></div>
-          <div class="smenu" id="smenu-${t.id}" style="display:none;">
-            ${Object.keys(SC).map(s=>`<div class="sopt" onclick="setStatus('${pane}',${t.id},'${s}')"><span class="sdot" style="background:${SC_COLOR[s]}"></span>${s}</div>`).join('')}
-          </div>
+      ${!isEditing?`<div class="status-block ${sc}" onclick="toggleMenu(${t.id},'${pane}',event)" style="position:relative;">
+        ${t.status}
+        <div class="smenu" id="smenu-${t.id}" style="display:none;">
+          ${Object.keys(SC).map(s=>`<div class="sopt" onclick="setStatus('${pane}',${t.id},'${s}')"><span class="sdot" style="background:${SC_COLOR[s]}"></span>${s}</div>`).join('')}
         </div>
-      </div>
+      </div>`:''}
     </div>`;
   }).join('');
   if(editingId!==null){
